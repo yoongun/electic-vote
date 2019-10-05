@@ -1,2 +1,2 @@
 # GalicMugwort
-Voting system made for e-democracy
+A voting system made for e-democracy
