@@ -2,7 +2,7 @@ package galmug
 
 import "testing"
 
-func TestFiniteElem(t *testing.T) {
+func TestFieldElem(t *testing.T) {
 	cases := []struct {
 		desc string
 		n    int
@@ -28,7 +28,7 @@ func TestFiniteElem(t *testing.T) {
 	}
 }
 
-func TestFiniteElemBoundary(t *testing.T) {
+func TestFieldElemBoundary(t *testing.T) {
 	cases := []struct {
 		desc string
 		n    int
