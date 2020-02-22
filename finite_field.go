@@ -7,6 +7,14 @@ type FieldElem struct {
 	p int
 }
 
+func (e FieldElem) Eq(FieldElem target) bool {
+	return true
+}
+
+func (e FieldElem) Neq(FieldElem target) bool {
+	return e.Eq(target)
+}
+
 func NewFieldElem(n int, p int) (*FieldElem, error) {
 	if n >= p {
 		return nil, errors.New("n must be lower than p ")
