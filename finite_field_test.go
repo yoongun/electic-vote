@@ -1,4 +1,4 @@
-package lacan
+package evote
 
 import "testing"
 
