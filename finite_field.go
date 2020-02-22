@@ -1,4 +1,4 @@
-package galmug
+package lacan
 
 import "errors"
 
