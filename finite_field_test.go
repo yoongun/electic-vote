@@ -67,8 +67,8 @@ func TestFieldElemCompare(t *testing.T) {
 		{"elem1 == elem2 (true case)", *elem1_7, *elem1_7, true},
 		{"elem1 == elem2 (false case)", *elem2_7, *elem1_7, false},
 		{"elem1 == elem2 (false case)", *elem1_7, *elem1_11, false},
-		{"elem1 != elem2 (true case)", *elem1_7, *elem2_7, true},
-		{"elem1 != elem2 (false case)", *elem2_13, *elem2_13, false},
+		{"elem1 == elem2 (false case)", *elem1_7, *elem2_7, false},
+		{"elem1 == elem2 (true case)", *elem2_13, *elem2_13, true},
 	}
 
 	for _, test := range cases {

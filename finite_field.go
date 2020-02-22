@@ -7,12 +7,15 @@ type FieldElem struct {
 	p int
 }
 
-func (e FieldElem) Eq(target FieldElem) bool {
-	return true
+func (e FieldElem) Eq(t FieldElem) bool {
+	if e.n == t.n && e.p == t.p {
+		return true
+	}
+	return false
 }
 
-func (e FieldElem) Neq(target FieldElem) bool {
-	return e.Eq(target)
+func (e FieldElem) Neq(t FieldElem) bool {
+	return !e.Eq(t)
 }
 
 func NewFieldElem(n int, p int) (*FieldElem, error) {
