@@ -7,11 +7,11 @@ type FieldElem struct {
 	p int
 }
 
-func (e FieldElem) Eq(FieldElem target) bool {
+func (e FieldElem) Eq(target FieldElem) bool {
 	return true
 }
 
-func (e FieldElem) Neq(FieldElem target) bool {
+func (e FieldElem) Neq(target FieldElem) bool {
 	return e.Eq(target)
 }
 

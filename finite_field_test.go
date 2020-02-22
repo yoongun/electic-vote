@@ -54,17 +54,21 @@ func TestFieldElemBoundary(t *testing.T) {
 }
 
 func TestFieldElemCompare(t *testing.T) {
+	elem1_7, _:= NewFieldElem(1, 7)
+	elem2_7, _:= NewFieldElem(2, 7)
+	elem1_11, _:= NewFieldElem(1, 11)
+	elem2_13, _:= NewFieldElem(2, 13)
 	cases := []struct {
 		desc 	string
 		elem1	FieldElem
 		elem2 	FieldElem
 		want	bool
 	}{
-		{"elem1 == elem2 (true case)", NewFieldElem(1, 7), NewFieldElem(1, 7), true},
-		{"elem1 == elem2 (false case)", NewFieldElem(2, 7), NewFieldElem(1, 7), false},
-		{"elem1 == elem2 (false case)", NewFieldElem(1, 7), NewFieldElem(1, 11), false},
-		{"elem1 != elem2 (true case)", NewFieldElem(1, 7), NewFieldElem(2, 7), true},
-		{"elem1 != elem2 (false case)", NewFieldElem(2, 13), NewFieldElem(2, 13), false},
+		{"elem1 == elem2 (true case)", *elem1_7, *elem1_7, true},
+		{"elem1 == elem2 (false case)", *elem2_7, *elem1_7, false},
+		{"elem1 == elem2 (false case)", *elem1_7, *elem1_11, false},
+		{"elem1 != elem2 (true case)", *elem1_7, *elem2_7, true},
+		{"elem1 != elem2 (false case)", *elem2_13, *elem2_13, false},
 	}
 
 	for _, test := range cases {
